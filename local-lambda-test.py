@@ -14,8 +14,9 @@ def lambda_handler(event, context):
         'message' : message
     }
 
+event = read_json_to_event("event.json")
+
 '''
 Call the lambda_handler function as aws would, when you invoke a lambda function
 '''
-event = read_json_to_event("event.json")
 print(lambda_handler(event, context=None))
